@@ -1,0 +1,23 @@
+Scrape log — All Shine No Grime Mobile Auto Detailing — 2026-06-29T20:02:59.566160
+============================================================
+
+--- YELP + PHOTO TINDER ---
+
+--- FACEBOOK ---
+[20:03:18] Facebook | page-fetch | https://www.facebook.com/allshinenogrimemobileautodetailingcharlotte | HTTP FAIL
+[20:03:20] Facebook | page-fetch | https://www.facebook.com/AllShineNoGrimeMobileAutoDetailingCharlotte | HTTP FAIL
+[20:03:21] Facebook | page-fetch | https://www.facebook.com/allshinenogrimemobileautodetailing.charlotte | HTTP FAIL
+[20:03:23] Facebook | page-fetch | https://www.facebook.com/allshinenogrimemobileautodetailing | HTTP FAIL
+[20:03:25] Facebook | page-fetch | https://www.facebook.com/AllShineNoGrimeMobileAutoDetailing | HTTP FAIL
+  Google search [All Shine No Grime Mobile Auto Detailing Charlotte NC facebook.com] → HTTP 200
+[20:03:31] Facebook | page-fetch | https://m.facebook.com/allshinenogrimemobileautodetailingcharlotte | HTTP 200
+
+--- INSTAGRAM ---
+  Google search [All Shine No Grime Mobile Auto Detailing Charlotte NC instagram.com] → HTTP 200
+[20:03:37] Instagram | handle-guess | https://www.instagram.com/allshinenogrimemobileautodetailing/ | HTTP 200
+
+--- BBB ---
+[20:03:40] BBB | search-page | https://www.bbb.org/search?find_text=All%20Shine%20No%20Grime%20Mobile%20Auto%20Detailing&find_loc=Charlotte%2C%2BNC | HTTP FAIL
+  Google search [All Shine No Grime Mobile Auto Detailing Charlotte NC bbb.org profile] → HTTP 200
+
+--- ANGI ---

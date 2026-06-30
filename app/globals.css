@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
+/* DESIGN COMMITMENT:
+   Hero archetype: Aurora Gradient — animated gradient blobs on near-black, stat-first hierarchy (4.9★ at 9rem centerpiece)
+   Primary trend: Dark Editorial — cinematic dark backgrounds, magazine quality, bold condensed type; sections alternate dark/light for rhythm
+   Borrowed: Tech Forward glassmorphism service cards; Industrial Modern precision details and thin accent lines
+   AI-default check: Avoided near-black+acid-green (using steel blue #617daf); avoided cream+terracotta; hero is stat-first not dark-photo-overlay; no broadsheet layout
+   21st.dev: aurora-hero (hero-bg), stagger-text (H1 word stagger), masonry-grid (gallery), shimmer-button (CTAs), tilt-card (services), count-animation (stats), scroll-animation (sections)
+   Font pairing: Teko (condensed display — motorsport/performance energy, mechanical letterforms feel automotive) + Fira Sans (technical body — precise, readable, engineered)
+   Signature element: Stat-first hero — 4.9★ at 9rem is the first visual impression; business name above in small uppercase; nothing competes with that credibility signal
+   Token system: primary=#333032 accent=#617daf bg=#d6c8b8 text=#333032 secondary=#8e8176 */
+
+/* DESIGN DIRECTION: Dark cinematic auto detailing — deep charcoal dominates, steel blue electrical accent, Teko condensed display, stat-first hero, glassmorphism service cards */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-primary:    #333032;
+  --color-secondary:  #8e8176;
+  --color-accent:     #617daf;
+  --color-background: #d6c8b8;
+  --color-text:       #333032;
+  --color-dark:       #1c1a1b;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.08);
+  --shadow-lg:  0 12px 32px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-xl:  0 24px 64px rgba(0,0,0,0.16), 0 8px 16px rgba(0,0,0,0.10);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  padding-bottom: 0.1em;
+}
+
+@keyframes aurora-1 {
+  0%   { transform: translate(0%, 0%) scale(1); }
+  25%  { transform: translate(20%, -20%) scale(1.2); }
+  50%  { transform: translate(-20%, 20%) scale(0.8); }
+  75%  { transform: translate(10%, -10%) scale(1.1); }
+  100% { transform: translate(0%, 0%) scale(1); }
+}
+
+@keyframes aurora-2 {
+  0%   { transform: translate(0%, 0%) scale(1); }
+  25%  { transform: translate(-20%, 20%) scale(1.1); }
+  50%  { transform: translate(20%, -20%) scale(0.9); }
+  75%  { transform: translate(-10%, 10%) scale(1.2); }
+  100% { transform: translate(0%, 0%) scale(1); }
+}
+
+@keyframes aurora-3 {
+  0%   { transform: translate(10%, 10%) scale(1); }
+  33%  { transform: translate(-10%, -15%) scale(1.15); }
+  66%  { transform: translate(15%, -5%) scale(0.95); }
+  100% { transform: translate(10%, 10%) scale(1); }
 }
