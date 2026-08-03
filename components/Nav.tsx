@@ -31,7 +31,7 @@ export default function Nav() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+        className="fixed top-0 left-0 right-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-300"
         style={{
           backgroundColor: scrolled ? 'rgba(28, 26, 27, 0.96)' : 'transparent',
           backdropFilter: scrolled ? 'blur(20px)' : 'none',
@@ -42,7 +42,7 @@ export default function Nav() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group" aria-label="All Shine No Grime home">
             <span
-              className="block w-1 h-8 rounded-full transition-all duration-300 group-hover:h-10"
+              className="block w-1 h-8 rounded-full transition-[height] duration-300 group-hover:h-10"
               style={{ background: 'var(--color-accent)' }}
               aria-hidden="true"
             />
@@ -69,7 +69,7 @@ export default function Nav() {
             ))}
             <a
               href="tel:7049070623"
-              className="group relative flex items-center gap-2 px-5 py-2.5 rounded-full text-white font-semibold text-sm overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="group relative flex items-center gap-2 px-5 py-2.5 rounded-full text-white font-semibold text-sm overflow-hidden transition-[transform,box-shadow] duration-300 hover:scale-105 hover:shadow-lg"
               style={{ background: 'var(--color-accent)', fontFamily: 'var(--font-fira-sans)' }}
             >
               <Phone size={14} aria-hidden="true" />

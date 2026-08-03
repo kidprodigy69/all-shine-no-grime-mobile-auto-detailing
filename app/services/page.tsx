@@ -208,7 +208,7 @@ export default function ServicesPage() {
           >
             <a
               href="tel:7049070623"
-              className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105"
+              className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-transform duration-300 hover:scale-105"
               style={{ background: 'var(--color-accent)', fontFamily: 'var(--font-fira-sans)' }}
             >
               <Phone size={16} aria-hidden="true" />
@@ -337,7 +337,7 @@ export default function ServicesPage() {
 
                   <a
                     href="tel:7049070623"
-                    className="group relative inline-flex items-center gap-2 self-start px-6 py-3 rounded-lg font-semibold text-sm overflow-hidden transition-all duration-300 hover:scale-105"
+                    className="group relative inline-flex items-center gap-2 self-start px-6 py-3 rounded-lg font-semibold text-sm overflow-hidden transition-transform duration-300 hover:scale-105"
                     style={{
                       background: 'var(--color-accent)',
                       color: 'white',
@@ -386,7 +386,7 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:7049070623"
-                className="group relative flex items-center justify-center gap-2 px-9 py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105"
+                className="group relative flex items-center justify-center gap-2 px-9 py-4 rounded-full font-semibold text-white overflow-hidden transition-transform duration-300 hover:scale-105"
                 style={{ background: 'var(--color-accent)', fontFamily: 'var(--font-fira-sans)' }}
               >
                 <Phone size={16} aria-hidden="true" />
@@ -395,7 +395,7 @@ export default function ServicesPage() {
               </a>
               <Link
                 href="/contact"
-                className="group relative flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-medium border-2 overflow-hidden transition-all duration-300"
+                className="group relative flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-medium border-2 overflow-hidden transition-colors duration-300"
                 style={{
                   borderColor: 'rgba(255,255,255,0.3)',
                   color: 'white',

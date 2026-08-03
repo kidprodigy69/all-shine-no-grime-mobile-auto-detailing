@@ -38,7 +38,7 @@ function AnimatedStat({
   }, [inView, end])
 
   return (
-    <span ref={ref}>
+    <span ref={ref} style={{ fontVariantNumeric: 'tabular-nums' }}>
       {prefix}
       {display}
       {suffix}
@@ -264,7 +264,7 @@ export default function HomePage() {
             <Reveal delay={0.2} direction="right">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 text-sm font-medium hover:gap-4 transition-all duration-300"
+                className="inline-flex items-center gap-2 text-sm font-medium hover:gap-4 transition-[gap] duration-300"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-fira-sans)' }}
               >
                 View All Services →
@@ -345,7 +345,6 @@ export default function HomePage() {
             alt="All Shine No Grime Mobile Auto Detailing — Charlotte NC"
             fill
             className="object-cover object-center"
-            priority
           />
         </motion.div>
         <div className="absolute inset-0 bg-black/58" />
@@ -374,7 +373,7 @@ export default function HomePage() {
           <Reveal delay={0.3}>
             <a
               href="tel:7049070623"
-              className="group relative flex items-center gap-2 px-9 py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_45px_rgba(97,125,175,0.4)]"
+              className="group relative flex items-center gap-2 px-9 py-4 rounded-full font-semibold text-white overflow-hidden transition-[transform,box-shadow] duration-300 hover:scale-105 hover:shadow-[0_0_45px_rgba(97,125,175,0.4)]"
               style={{
                 background: 'var(--color-accent)',
                 fontFamily: 'var(--font-fira-sans)',
@@ -467,7 +466,7 @@ export default function HomePage() {
             <Reveal delay={0.2} direction="right">
               <Link
                 href="/gallery"
-                className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-300 hover:gap-4"
+                className="inline-flex items-center gap-2 text-sm font-medium transition-[gap] duration-300 hover:gap-4"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-fira-sans)' }}
               >
                 View Full Gallery →
@@ -532,7 +531,7 @@ export default function HomePage() {
             <Reveal delay={0.2} direction="right">
               <Link
                 href="/reviews"
-                className="inline-flex items-center gap-2 text-sm font-medium transition-all duration-300 hover:gap-4"
+                className="inline-flex items-center gap-2 text-sm font-medium transition-[gap] duration-300 hover:gap-4"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-fira-sans)' }}
               >
                 Read All Reviews →
@@ -692,7 +691,7 @@ export default function HomePage() {
               {/* Pill CTA — shimmer hover */}
               <a
                 href="tel:7049070623"
-                className="group relative flex items-center gap-2 px-10 py-5 rounded-full font-bold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(97,125,175,0.35)]"
+                className="group relative flex items-center gap-2 px-10 py-5 rounded-full font-bold text-white overflow-hidden transition-[transform,box-shadow] duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(97,125,175,0.35)]"
                 style={{
                   background: 'var(--color-accent)',
                   fontFamily: 'var(--font-fira-sans)',
@@ -709,7 +708,7 @@ export default function HomePage() {
               {/* Outlined fill-slide CTA */}
               <Link
                 href="/contact"
-                className="group relative flex items-center gap-2 px-9 py-5 rounded-lg font-medium border-2 overflow-hidden transition-all duration-300"
+                className="group relative flex items-center gap-2 px-9 py-5 rounded-lg font-medium border-2 overflow-hidden transition-colors duration-300"
                 style={{
                   borderColor: 'var(--color-primary)',
                   color: 'var(--color-primary)',

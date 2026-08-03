@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Sitemap: https://all-shine-no-grime-mobile-auto-detailing.vercel.app/sitemap.xml

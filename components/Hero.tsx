@@ -160,7 +160,7 @@ export default function Hero() {
           {/* Primary CTA — pill shape with shimmer */}
           <a
             href="tel:7049070623"
-            className="group relative flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(97,125,175,0.4)]"
+            className="group relative flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-[transform,box-shadow] duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(97,125,175,0.4)]"
             style={{
               background: 'var(--color-accent)',
               fontFamily: 'var(--font-fira-sans)',

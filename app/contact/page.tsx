@@ -84,7 +84,17 @@ export default function ContactPage() {
             </motion.h1>
           </div>
         </div>
-      </section>
+      
+      <div className="w-full h-64 rounded-lg overflow-hidden mt-8">
+        <iframe
+          src="https://maps.google.com/maps?q=14119+Whistling+Duck+Ct%2C+Charlotte%2C+NC+28273%2C+USA&output=embed"
+          width="100%" height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+        />
+      </div>
+</section>
 
       {/* ── FORM + INFO ── */}
       {/* CONVERSION INTENT: direct conversion — form and phone side-by-side */}
@@ -113,9 +123,10 @@ export default function ContactPage() {
                     id="name"
                     type="text"
                     required
+                    autoComplete="name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border outline-none transition-colors focus:border-[var(--color-accent)]"
+                    className="w-full px-4 py-3 rounded-lg border outline-none transition-colors focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/40"
                     style={{ borderColor: 'rgba(51,48,50,0.2)', background: 'white', color: 'var(--color-text)', fontFamily: 'var(--font-fira-sans)' }}
                     placeholder="Jane Smith"
                   />
@@ -129,9 +140,10 @@ export default function ContactPage() {
                     <input
                       id="phone"
                       type="tel"
+                      autoComplete="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg border outline-none transition-colors focus:border-[var(--color-accent)]"
+                      className="w-full px-4 py-3 rounded-lg border outline-none transition-colors focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/40"
                       style={{ borderColor: 'rgba(51,48,50,0.2)', background: 'white', color: 'var(--color-text)', fontFamily: 'var(--font-fira-sans)' }}
                       placeholder="(704) 555-0123"
                     />
@@ -144,9 +156,10 @@ export default function ContactPage() {
                       id="email"
                       type="email"
                       required
+                      autoComplete="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg border outline-none transition-colors focus:border-[var(--color-accent)]"
+                      className="w-full px-4 py-3 rounded-lg border outline-none transition-colors focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/40"
                       style={{ borderColor: 'rgba(51,48,50,0.2)', background: 'white', color: 'var(--color-text)', fontFamily: 'var(--font-fira-sans)' }}
                       placeholder="jane@email.com"
                     />
@@ -163,7 +176,7 @@ export default function ContactPage() {
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg border outline-none transition-colors resize-none focus:border-[var(--color-accent)]"
+                    className="w-full px-4 py-3 rounded-lg border outline-none transition-colors resize-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/40"
                     style={{ borderColor: 'rgba(51,48,50,0.2)', background: 'white', color: 'var(--color-text)', fontFamily: 'var(--font-fira-sans)' }}
                     placeholder="Tell us about your vehicle and what you need..."
                   />
@@ -173,44 +186,46 @@ export default function ContactPage() {
                   type="button"
                   onClick={handleSubmit}
                   disabled={status === 'sending'}
-                  className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 disabled:opacity-60 disabled:hover:scale-100"
+                  className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white overflow-hidden transition-[transform,opacity] duration-300 hover:scale-105 disabled:opacity-60 disabled:hover:scale-100"
                   style={{ background: 'var(--color-accent)', fontFamily: 'var(--font-fira-sans)' }}
                 >
                   {status === 'sending' ? 'Sending...' : 'Send Message'}
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700" aria-hidden="true" />
                 </button>
 
-                {status === 'success' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex items-start gap-2 p-4 rounded-lg"
-                    style={{ background: 'rgba(97,125,175,0.1)', border: '1px solid rgba(97,125,175,0.3)' }}
-                  >
-                    <CheckCircle size={18} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--color-accent)' }} aria-hidden="true" />
-                    <p className="text-sm" style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-fira-sans)' }}>
-                      Thank you! We will be in touch shortly.
-                    </p>
-                  </motion.div>
-                )}
+                <div aria-live="polite">
+                  {status === 'success' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex items-start gap-2 p-4 rounded-lg"
+                      style={{ background: 'rgba(97,125,175,0.1)', border: '1px solid rgba(97,125,175,0.3)' }}
+                    >
+                      <CheckCircle size={18} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--color-accent)' }} aria-hidden="true" />
+                      <p className="text-sm" style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-fira-sans)' }}>
+                        Thank you! We will be in touch shortly.
+                      </p>
+                    </motion.div>
+                  )}
 
-                {status === 'error' && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex items-start gap-2 p-4 rounded-lg"
-                    style={{ background: 'rgba(220,38,38,0.06)', border: '1px solid rgba(220,38,38,0.25)' }}
-                  >
-                    <AlertCircle size={18} className="mt-0.5 flex-shrink-0" style={{ color: '#dc2626' }} aria-hidden="true" />
-                    <p className="text-sm" style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-fira-sans)' }}>
-                      Something went wrong. Please call us directly at{' '}
-                      <a href="tel:7049070623" className="font-semibold underline">
-                        (704) 907-0623
-                      </a>
-                      .
-                    </p>
-                  </motion.div>
-                )}
+                  {status === 'error' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex items-start gap-2 p-4 rounded-lg"
+                      style={{ background: 'rgba(220,38,38,0.06)', border: '1px solid rgba(220,38,38,0.25)' }}
+                    >
+                      <AlertCircle size={18} className="mt-0.5 flex-shrink-0" style={{ color: '#dc2626' }} aria-hidden="true" />
+                      <p className="text-sm" style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-fira-sans)' }}>
+                        Something went wrong. Please call us directly at{' '}
+                        <a href="tel:7049070623" className="font-semibold underline">
+                          (704) 907-0623
+                        </a>
+                        .
+                      </p>
+                    </motion.div>
+                  )}
+                </div>
               </div>
             </div>
           </Reveal>

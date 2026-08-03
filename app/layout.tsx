@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Teko, Fira_Sans } from 'next/font/google'
+import { MotionConfig } from 'framer-motion'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -86,9 +87,11 @@ export default function RootLayout({
         className="min-h-full flex flex-col"
         style={{ fontFamily: 'var(--font-fira-sans)' }}
       >
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <MotionConfig reducedMotion="user">
+          <Nav />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </MotionConfig>
       </body>
     </html>
   )
