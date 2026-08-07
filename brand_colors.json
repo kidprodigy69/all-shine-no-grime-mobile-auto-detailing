@@ -1,11 +1,11 @@
 {
   "colors": {
-    "primary": "#333032",
-    "secondary": "#8e8176",
-    "accent": "#617daf",
-    "background": "#d6c8b8",
-    "text": "#333032",
+    "primary": "#611c22",
+    "secondary": "#d01e24",
+    "accent": "#fc2424",
+    "background": "#fafafa",
+    "text": "#611c22",
     "vibe": "bold and powerful"
   },
-  "source_image": "/tmp/milo-all-shine-no-grime-mobile-auto-detailing/scraped/google-1.jpg"
+  "source_image": "/tmp/milo-all-shine-no-grime-mobile-auto-detailing/scraped/logo.png"
 }

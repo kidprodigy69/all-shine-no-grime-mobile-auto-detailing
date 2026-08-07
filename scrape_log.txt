@@ -1,17 +1,17 @@
-Scrape log — All Shine No Grime Mobile Auto Detailing — 2026-08-03T09:42:12.169835
+Scrape log — All Shine No Grime Mobile Auto Detailing — 2026-08-07T03:52:00.208629
 ============================================================
 
 --- YELP + PHOTO TINDER ---
 
 --- FACEBOOK ---
-[10:22:09] Facebook | page-fetch | https://www.facebook.com/allshinenogrimemobileautodetailinggastonia | HTTP 200
+[03:52:20] Facebook | page-fetch | https://www.facebook.com/allshinenogrimemobileautodetailinggastonia | HTTP 200
 
 --- INSTAGRAM ---
   Google search [All Shine No Grime Mobile Auto Detailing Gastonia NC instagram.com] → HTTP 200
-[10:37:35] Instagram | handle-guess | https://www.instagram.com/allshinenogrimemobileautodetailing/ | HTTP 200
+[03:52:33] Instagram | handle-guess | https://www.instagram.com/allshinenogrimemobileautodetailing/ | HTTP 200
 
 --- BBB ---
-[10:51:10] BBB | search-page | https://www.bbb.org/search?find_text=All%20Shine%20No%20Grime%20Mobile%20Auto%20Detailing&find_loc=Gastonia%2C%2BNC | HTTP 200
+[03:52:36] BBB | search-page | https://www.bbb.org/search?find_text=All%20Shine%20No%20Grime%20Mobile%20Auto%20Detailing&find_loc=Gastonia%2C%2BNC | HTTP 200
   Google search [All Shine No Grime Mobile Auto Detailing Gastonia NC bbb.org profile] → HTTP 200
 
 --- ANGI ---

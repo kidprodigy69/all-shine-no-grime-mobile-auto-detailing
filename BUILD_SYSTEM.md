@@ -27,8 +27,10 @@ These patterns appear in EVERY generic Wix/Squarespace/GoDaddy site. If SPECTACL
 **Layout:**
 - ❌ Standard 3-column service card grid with icon on top + title + description. No photos. This looks like every Wix site.
 - ❌ Stats counter strip on EVERY build. Only use it when the business has impressive numbers (1000+ reviews, 20+ years, multiple locations).
-- ❌ Scrolling review ticker/marquee on EVERY build. Use it once every 4–5 builds max.
+- ❌ Scrolling review ticker/marquee on EVERY build. Use it once every 4–5 builds max. (ENFORCED in code as of 8/4: `pick_design_direction` reads `~/.milo/design-history.json` and excludes heroes/uniqueness elements/archetypes used in the last 3 builds.)
 - ❌ Standard 3-column footer.
+- ❌ Ragged review grids — review/testimonial card count MUST divide evenly by the column count at every breakpoint (6 = 3×2 desktop / 2×3 tablet).
+- ❌ Mismatched imagery — a photo next to a service must show THAT service (use the captions in the build prompt's photo manifest); wrong photo is worse than no photo.
 - ❌ Timeline about section with dots and lines.
 
 **Buttons:**
@@ -892,7 +894,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
 | Page | Path | Notes |
 |---|---|---|
-| Homepage | `/` | Hero, social proof, about preview, services/menu, testimonials, location, CTA |
+| Homepage | `/` | Hero first, then section ORDER comes from the build's LAYOUT ARCHETYPE (8 archetypes × optional add-on toggles, chosen per slug in `pick_design_direction` — Classic, Proof-First, Story-Led, Conversion-Sprint, Gallery-Forward, Local-First, Editorial, Minimal-Punch). Never assume a fixed order. Every build must also integrate ≥3 components from the 21st.dev registry (via 21st-dev-magic MCP; hand-build equivalents if the MCP fails — no retry loops). |
 | About | `/about` | Full story, team (if real photos exist), values |
 | Services or Menu | `/services` or `/menu` | Full offering with descriptions AND prices |
 | Reviews | `/reviews` | Testimonials + Supabase review form |
