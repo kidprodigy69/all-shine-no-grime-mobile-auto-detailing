@@ -158,7 +158,7 @@ export default function Footer() {
           <span style={{ fontFamily: 'var(--font-fira-sans)' }}>
             Built by{' '}
             <a
-              href="https://onyxmediagroup.com"
+              href="https://www.onyxmediagroup.net"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white/70 transition-colors"
